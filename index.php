@@ -1,10 +1,8 @@
 <?php
-header('Content-Type:text/csv;charset=UTF-8;');
-
-setlocale(LC_CTYPE, 'ko_KR.eucKR');
 
 $row = 1;
 $handle = fopen("1.csv", "r");
+setlocale(LC_CTYPE, 'ko_KR.eucKR');
 while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 $num = count($data);
 echo "<p> $num fields in line $row: <br /></p>\n";
