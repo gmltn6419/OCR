@@ -19,9 +19,9 @@ for ($c=0; $c < $num; $c++) {
 }
 fclose($handle);
 
-echo $Lng[0]."<br>\n">;
-echo $Lng[1]."<br>\n">;
-echo $Lat[0]."<br>\n">;
+echo $Lng[0]."<br>\n";
+echo $Lng[1]."<br>\n";
+echo $Lat[0]."<br>\n";
 echo $Lat[1];
 
 ?>
