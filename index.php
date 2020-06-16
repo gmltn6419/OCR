@@ -33,6 +33,9 @@ fclose($handle);
 <form>
 <div id="map" style="width:100%;height:500px;"></div>
 <script>
+// 주소-좌표 변환 객체를 생성합니다
+var geocoder = new kakao.maps.services.Geocoder();
+
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(35.167132153496304, 129.04583020369563), // 지도의 중심좌표
@@ -44,9 +47,6 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
 var positions1 = new Array("<?=implode("\",\"" , $Lat);?>");
 var positions2 = new Array("<?=implode("\",\"" , $Lng);?>");
 var name = new Array();
-
-// 주소-좌표 변환 객체를 생성합니다
-var geocoder = new kakao.maps.services.Geocoder();
 
 for (var i = 0; i < positions1.length; i ++) {  
 
