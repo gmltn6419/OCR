@@ -72,7 +72,7 @@ for (var i = 0; i < positions1.length; i ++) {
 
     // 마커에 표시할 인포윈도우를 생성합니다 
     var infowindow = new kakao.maps.InfoWindow({
-        content: name[i],
+        content: '1',
         removable : true
     });
 
