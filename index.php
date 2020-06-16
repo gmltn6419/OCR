@@ -1,17 +1,29 @@
 <?php
 $row = 1;
 $handle = fopen("2.csv", "r");
+$Lng = [];
+$Lat = [];
 
 while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 $num = count($data);
-echo "<p> $num fields in line $row: <br /></p>\n";
-
 $row++;
+
 for ($c=0; $c < $num; $c++) {
-    echo $data[$c] . "<br />\n";
+    if($c % 2 == 0){
+        $Lat[] = $data[$c];
+    }
+    else{
+        $Lng[] = $data[$c];
+    }
 }
 }
 fclose($handle);
+
+echo $Lng[0];
+echo $Lng[1];
+echo $Lat[0];
+echo $Lat[1];
+
 ?>
 <!DOCTYPE html>
 <html>
