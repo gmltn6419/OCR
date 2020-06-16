@@ -18,19 +18,6 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
     }
 }
 fclose($handle);
-
-
-echo ($Lat[0])."<br>\n";
-echo ($Lat[1])."<br>\n";
-echo ($Lat[2])."<br>\n";
-echo ($Lat[3])."<br>\n";
-echo ($Lat[4])."<br>\n";
-echo ($Lng[0])."<br>\n";
-echo ($Lng[1])."<br>\n";
-echo ($Lng[2])."<br>\n";
-echo ($Lng[3])."<br>\n";
-echo ($Lng[4])."<br>\n";
-
 ?>
 
 <!DOCTYPE html>
@@ -52,16 +39,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-var positions1 = new Array("<?=implode("\",\"" , $Lng);?>");
-var positions2 = new Array("<?=implode("\",\"" , $Lat);?>");
-
-document.write(position1[0]);
-document.write(position2[0]);
-document.write(position1[1]);
-document.write(position2[1]);
-document.write(position1[2]);
-document.write(position2[2]);
-
+var positions1 = new Array("<?=implode("\",\"" , $Lat);?>");
+var positions2 = new Array("<?=implode("\",\"" , $Lng);?>");
 
 for (var i = 0; i < positions1.length; i ++) {  
     // 마커 이미지의 이미지 크기 입니다
