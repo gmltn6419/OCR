@@ -47,18 +47,16 @@ var name = new Array();
 var geocoder = new kakao.maps.services.Geocoder();
 
 for (var i = 0; i < positions1.length; i ++) {  
-    var coord = new kakao.maps.LatLng(positions1[i], positions2[i]);
 
     var callback = function(result, status) {
         if (status === kakao.maps.services.Status.OK) {
             name[i] = result[i].address.address_name;
+            console.log(name[i]);
         }
     };
 
-    geocoder.coord2Address(coord.getLng(), coord.getLat(), callback);
+    geocoder.coord2Address(positions1[i], positions2[i], callback);
 }
-
-document.write(name[0]);
 
 
 for (var i = 0; i < positions1.length; i ++) {  
