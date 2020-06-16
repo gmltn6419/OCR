@@ -1,6 +1,6 @@
 <?php
 $row = 1;
-$handle = fopen("1.csv", "r");
+$handle = fopen("2.csv", "r");
 
 while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 $num = count($data);
