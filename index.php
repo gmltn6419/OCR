@@ -1,5 +1,6 @@
+<?php
+header('Content-Type:text/csv;charset=UTF-8;');
 
- <?php
  $row = 1;
  $handle = fopen("1.csv", "r");
  while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
