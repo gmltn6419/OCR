@@ -47,8 +47,14 @@ var name = new Array();
 var geocoder = new kakao.maps.services.Geocoder();
 
 for (var i = 0; i < positions1.length; i ++) {  
-    name[i] = geocoder.coord2RegionCode(positions1[i], positions2[i], callback);
+    var callback = function(result, status) {
+    if (status === kakao.maps.services.Status.OK) {
+        name[i] = result[i].address.address_name;
+    }
+    geocoder.coord2Address(positions1[i], positions2[i], callback);
+    };
 }
+
 
 for (var i = 0; i < positions1.length; i ++) {  
     // 마커 이미지의 이미지 크기 입니다
