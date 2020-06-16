@@ -33,8 +33,8 @@ fclose($handle);
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(35.15718693101715, 129.05943993160383), // 지도의 중심좌표
-        level: 2 // 지도의 확대 레벨
+        center: new kakao.maps.LatLng(35.167132153496304, 129.04583020369563), // 지도의 중심좌표
+        level: 6 // 지도의 확대 레벨
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
