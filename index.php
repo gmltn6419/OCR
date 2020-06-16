@@ -1,7 +1,7 @@
 <?php
 $ch = curl_init();
 $url = 'http://apis.data.go.kr/B551182/pubReliefHospService/getpubReliefHospList'; /*URL*/
-$queryParams = '?' . urlencode('ServiceKey') . 'JNAU6LstvMSJ6Hu2sQtu%2BNAVdUyJrHF3q3DjLgVvMHlmA2ga6XB0qThVdNEmHP%2F4XyvMac38cd9DlaOLfs%2BY8g%3D%3D'; /*Service Key*/
+$queryParams = '?' . urlencode('ServiceKey') . '=Ha0NDXyYVb5iNM20EW%2FtGJ1XKwmIclH7V5WqKkc27ksZSLt6Ee2PFLnJ8cJ1QnI764%2BRm%2B3elnn%2BSFoN2wrkUA%3D%3D'; /*Service Key*/
 $queryParams .= '&' . urlencode('ServiceKey') . '=' . urlencode('-'); /**/
 $queryParams .= '&' . urlencode('pageNo') . '=' . urlencode('1'); /**/
 $queryParams .= '&' . urlencode('numOfRows') . '=' . urlencode('10'); /**/
