@@ -8,7 +8,7 @@ $num = count($data);
 echo "<p> $num fields in line $row: <br /></p>\n";
 $row++;
 for ($c=0; $c < $num; $c++) {
-    echo $data[$c] . "<br />\n";
+    echo $data[iconv("euc-kr","utf-8",$c);] . "<br />\n";
 }
 }
 fclose($handle);
