@@ -50,7 +50,7 @@ for (var i = 0; i < positions1.length; i ++) {
 
     var callback = function(result, status) {
         if (status === kakao.maps.services.Status.OK) {
-            name[i] = result[i].address.address_name;
+            name[i] = result[0].address.address_name;
             console.log(name[i]);
         }
     };
