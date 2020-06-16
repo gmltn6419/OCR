@@ -1,4 +1,6 @@
 <?php
+setlocale(LC_CTYPE, 'ko_KR.eucKR');
+
 $row = 1;
 $handle = fopen("1.csv", "r");
 while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
