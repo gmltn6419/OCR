@@ -4,7 +4,7 @@ setlocale(LC_CTYPE, 'ko_KR.eucKR');
 $row = 1;
 $handle = fopen("1.csv", "r");
 
-while ((iconv("euc-kr","utf-8",$data); = fgetcsv($handle, 1000, ",")) !== FALSE) {
+while ((iconv("euc-kr","utf-8",$data) = fgetcsv($handle, 1000, ",")) !== FALSE) {
 $num = count($data);
 
 echo "<p> $num fields in line $row: <br /></p>\n";
