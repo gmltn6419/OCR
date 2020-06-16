@@ -16,15 +16,16 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
             $Lng[] = $data[$c];
         }
     }
-
-    echo ($Lat[0])."<br>\n";
-    echo ($Lat[1])."<br>\n";
-    echo ($Lat[2])."<br>\n";
-    echo ($Lng[0])."<br>\n";
-    echo ($Lng[1])."<br>\n";
-    echo ($Lng[2]);
 }
 fclose($handle);
+
+
+echo ($Lat[0])."<br>\n";
+echo ($Lat[1])."<br>\n";
+echo ($Lat[2])."<br>\n";
+echo ($Lng[0])."<br>\n";
+echo ($Lng[1])."<br>\n";
+echo ($Lng[2]);
 ?>
 
 <!DOCTYPE html>
