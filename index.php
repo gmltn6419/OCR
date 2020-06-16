@@ -42,6 +42,7 @@ var positions1 = new Array("<?=implode("\",\"" , $Lng);?>");
 var positions2 = new Array("<?=implode("\",\"" , $Lat);?>");
 
 for (var i = 0; i < positions1.length; i ++) {   
+    var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
     // 마커 이미지의 이미지 크기 입니다
     var imageSize = new kakao.maps.Size(24, 35);  
     
