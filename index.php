@@ -41,7 +41,12 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
 var positions1 = new Array("<?=implode("\",\"" , $Lng);?>");
 var positions2 = new Array("<?=implode("\",\"" , $Lat);?>");
 
-for (var i = 0; i < positions1.length; i ++) {     
+
+for (var i = 0; i < positions1.length; i ++) {  
+    
+    document.write(position1[i]+"<br/>");
+    document.write(position1[i]+"<br/>");
+
     // 마커 이미지의 이미지 크기 입니다
     var imageSize = new kakao.maps.Size(24, 35);  
     
