@@ -17,6 +17,7 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         }
     }
 }
+
 fclose($handle);
 ?>
 
@@ -34,14 +35,14 @@ fclose($handle);
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(35.167132153496304, 129.04583020369563), // 지도의 중심좌표
-        level: 6 // 지도의 확대 레벨
+        level: 5 // 지도의 확대 레벨
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 var positions1 = new Array("<?=implode("\",\"" , $Lat);?>");
 var positions2 = new Array("<?=implode("\",\"" , $Lng);?>");
-var name = new Array();
+//var name = new Array();
 
 // 주소-좌표 변환 객체를 생성합니다
 /*
