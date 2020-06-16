@@ -55,7 +55,7 @@ for (var i = 0; i < positions1.length; i ++) {
         }
     };
 
-    geocoder.coord2Address(positions1[i], positions2[i], callback);
+    geocoder.coord2Address(positions2[i], positions1[i], callback);
 }
 
 
