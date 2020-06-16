@@ -1,8 +1,9 @@
 <?php
 $row = 1;
 $handle = fopen("2.csv", "r");
-$Lng = [];
-$Lat = [];
+$Lat = []; //위도
+$Lng = []; // 경도
+
 
 while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
     $num = count($data);
@@ -30,7 +31,7 @@ fclose($handle);
 </head>
 <body>
 <form>
-<div id="map" style="width:100%;height:80%;"></div>
+<div id="map" style="width:100%;height:300px;"></div>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
