@@ -70,6 +70,7 @@ for (var i = 0; i < positions1.length; i ++) {
         position: new kakao.maps.LatLng(positions1[i], positions2[i])// 마커를 표시할 위치
     });
 
+    /*
     // 마커에 표시할 인포윈도우를 생성합니다 
     var infowindow = new kakao.maps.InfoWindow({
         content: '<div> 1 </div>',
@@ -77,6 +78,7 @@ for (var i = 0; i < positions1.length; i ++) {
     });
 
     kakao.maps.event.addListener(marker, 'click', click(map,marker,infowindow));
+    */
 }
 
 function click(map, marker, infowindow) {
