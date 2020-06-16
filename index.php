@@ -33,8 +33,6 @@ fclose($handle);
 <form>
 <div id="map" style="width:100%;height:500px;"></div>
 <script>
-// 주소-좌표 변환 객체를 생성합니다
-var geocoder = new kakao.maps.services.Geocoder();
 
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
@@ -49,14 +47,16 @@ var positions2 = new Array("<?=implode("\",\"" , $Lng);?>");
 var name = new Array();
 
 for (var i = 0; i < positions1.length; i ++) {  
+    // 주소-좌표 변환 객체를 생성합니다
+    var geocoder = new kakao.maps.services.Geocoder();
 
     var callback = function(result, status) {
-        if (status === kakao.maps.services.Status.OK) {
-            result[0].address.address_name;
-        }
-    };
+    if (status === kakao.maps.services.Status.OK) {
+        console.log(result[0].address.address_name);
+    }
+};
 
-    name[i]= geocoder.coord2Address(positions2[i], positions1[i], callback);
+    name[i]= geocoder.coord2Address(positions2[i], positions1[i],callback);
 }
 
 
