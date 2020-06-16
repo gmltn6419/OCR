@@ -23,9 +23,14 @@ fclose($handle);
 echo ($Lat[0])."<br>\n";
 echo ($Lat[1])."<br>\n";
 echo ($Lat[2])."<br>\n";
+echo ($Lat[3])."<br>\n";
+echo ($Lat[4])."<br>\n";
 echo ($Lng[0])."<br>\n";
 echo ($Lng[1])."<br>\n";
-echo ($Lng[2]);
+echo ($Lng[2])."<br>\n";
+echo ($Lng[3])."<br>\n";
+echo ($Lng[4])."<br>\n";
+
 ?>
 
 <!DOCTYPE html>
