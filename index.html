@@ -4,21 +4,49 @@
 </head>
 <body>
 <script type="text/javascript">
-var xhr = new XMLHttpRequest();
-var url = 'http://apis.data.go.kr/B551182/pubReliefHospService/getpubReliefHospList'; /*URL*/
-var queryParams = '?' + encodeURIComponent('ServiceKey') + '='+'Ha0NDXyYVb5iNM20EW%2FtGJ1XKwmIclH7V5WqKkc27ksZSLt6Ee2PFLnJ8cJ1QnI764%2BRm%2B3elnn%2BSFoN2wrkUA%3D%3D'; /*Service Key*/
-queryParams += '&' + encodeURIComponent('ServiceKey') + '=' + encodeURIComponent('-'); /**/
-queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
-queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /**/
-queryParams += '&' + encodeURIComponent('spclAdmTyCd') + '=' + encodeURIComponent('A0'); /**/
-xhr.open('GET', url + queryParams);
-xhr.onreadystatechange = function () {
-    if (this.readyState == 4) {
-        alert('Status: '+this.status+'nHeaders: '+JSON.stringify(this.getAllResponseHeaders())+'nBody: '+this.responseText);
-    }
-};
+// javascript
+$.ajax({
+    url: '국민안심병원_운영기관_현황.csv',
+    dataType: 'text',
+  }).done(successFunction);
 
-xhr.send('');
+
+
+function successFunction(data) {
+  var allRows = data.split(/\r?\n|\r/);
+  var table = '<table>';
+  for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
+    if (singleRow === 0) {
+      table += '<thead>';
+      table += '<tr>';
+    } else {
+      table += '<tr>';
+    }
+    var rowCells = allRows[singleRow].split(',');
+    for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+      if (singleRow === 0) {
+        table += '<th>';
+        table += rowCells[rowCell];
+        table += '</th>';
+      } else {
+        table += '<td>';
+        table += rowCells[rowCell];
+        table += '</td>';
+      }
+    }
+    if (singleRow === 0) {
+      table += '</tr>';
+      table += '</thead>';
+      table += '<tbody>';
+    } else {
+      table += '</tr>';
+    }
+  }
+  table += '</tbody>';
+  table += '</table>';
+  $('body').append(table);
+}
+[출처] javascript 로 csv파일 파싱|작성자 감자
 </script>
 </body>
 </html>
