@@ -41,11 +41,17 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
 var positions1 = new Array("<?=implode("\",\"" , $Lng);?>");
 var positions2 = new Array("<?=implode("\",\"" , $Lat);?>");
 
+document.write(position1[0]+"<br/>");
+document.write(position2[0]+"<br/>");
+document.write(position1[1]+"<br/>");
+document.write(position2[1]+"<br/>");
+document.write(position1[2]+"<br/>");
+document.write(position2[2]+"<br/>");
+
 
 for (var i = 0; i < positions1.length; i ++) {  
     
-    document.write(position1[i]+"<br/>");
-    document.write(position1[i]+"<br/>");
+    
 
     // 마커 이미지의 이미지 크기 입니다
     var imageSize = new kakao.maps.Size(24, 35);  
@@ -66,8 +72,6 @@ for (var i = 0; i < positions1.length; i ++) {
     kakao.maps.event.addListener(marker, 'click', click(map,marker,infowindow));
     */
 }
-
-marker.setMap(map);
 /*
 function click(map, marker, infowindow) {
       // 마커 위에 인포윈도우를 표시합니다
