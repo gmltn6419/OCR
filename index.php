@@ -1,18 +1,7 @@
 <?php
-
-		
-
-	require_once "./PHPExcel-1.8/Classes/PHPExcel.php"; // PHPExcel.php을 불러옴.
-
-
-
+	//require_once "./PHPExcel-1.8/Classes/PHPExcel.php"; // PHPExcel.php을 불러옴.
 	$objPHPExcel = new PHPExcel();
-
-
-
-	require_once "./PHPExcel-1.8/Classes/PHPExcel/IOFactory.php"; // IOFactory.php을 불러옴.
-
-
+	//require_once "./PHPExcel-1.8/Classes/PHPExcel/IOFactory.php"; // IOFactory.php을 불러옴.
 
 	$filename = './국민안심병원_운영기관_현황.xlsx'; // 읽어들일 엑셀 파일의 경로와 파일명을 지정한다.
 
