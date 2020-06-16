@@ -1,4 +1,6 @@
 <?php
+header('Content-Type:text/csv;charset=UTF-8;');
+
 setlocale(LC_CTYPE, 'ko_KR.eucKR');
 
 $row = 1;
