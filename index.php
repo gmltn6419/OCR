@@ -44,6 +44,7 @@ var positions2 = new Array("<?=implode("\",\"" , $Lng);?>");
 var name = new Array();
 
 // 주소-좌표 변환 객체를 생성합니다
+/*
 var geocoder = new kakao.maps.services.Geocoder();
 
 for (var i = 0; i < positions1.length; i ++) {  
@@ -57,7 +58,7 @@ for (var i = 0; i < positions1.length; i ++) {
 
     geocoder.coord2Address(positions2[i], positions1[i], callback);
 }
-
+*/
 
 for (var i = 0; i < positions1.length; i ++) {  
     // 마커 이미지의 이미지 크기 입니다
