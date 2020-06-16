@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: text/html; charset=UTF-8");
+setlocale(LC_CTYPE, 'ko_KR.utf8');
 
 $row = 1;
 $handle = fopen("1.csv", "r");
