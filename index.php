@@ -80,7 +80,7 @@ for (var i = 0; i < positions1.length; i ++) {
     kakao.maps.event.addListener(marker, 'click', click(map,marker,infowindow));
     */
 }
-
+/*
 function click(map, marker, infowindow) {
       // 마커 위에 인포윈도우를 표시합니다
       return function(){
@@ -88,7 +88,7 @@ function click(map, marker, infowindow) {
     }
         
 }
-
+*/
 </script>
 </form>
 </body>
