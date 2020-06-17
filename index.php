@@ -1,7 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+<input type = "file" id="myFile" />
+
+<script>
+var file = document.querySelector('#myFile');
+var result;
+
+// 정상 로드시 result에 인코딩 값을 저장하기
+var reader = new FileReader(file);
+reader.onload = function() {
+  result = reader.result;
+  <?=$img?> = result;
+}
+
+// 실패할 경우 에러 출력하기
+reader.onerror = function (error) {
+   console.log('Error');
+};
+</script>
 <?php
   $client_secret = "T1hYWWZkV2lKdmh0TUlrVWRJUWRHakpVWnhZVWRoSVo=";
   $url = "https://1464f1962ec246f78d43a81570f890f4.apigw.ntruss.com/custom/v1/2227/03d0fe469502affac6c2f54393e8beec2aa98d871cffb9bf9f696aceddf62dac/general";
-  $image_file = "./test.jpg";
+  $image_file = $img;
 
   $params->version = "V2";
   $params->requestId = uniqid();
@@ -36,3 +58,6 @@
     echo "ERROR: ".$response;
   }
 ?>
+</body>
+</html>
+
