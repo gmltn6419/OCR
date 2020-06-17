@@ -8,11 +8,11 @@ if(isset($_FILES["file"]))
     $fileName = md5(date('Y-m-d H:i:s:u')).$_FILES["file"]["name"]; //unique filename
  
     //move the file to uploads folder
-    move_uploaded_file($_FILES["file"]["tmp_name"],$output_dir.$fileName);
+    move_uploaded_file($_FILES["file"]["tmp_name"],$fileName);
      
      
     //multipart form post using CURL
-    $filePath = realpath($output_dir.$fileName);
+    $filePath = realpath($fileName);
     $post = array('apikey' => 'AIzaSyDVGM-H4bVy9eRPnTSz0wPB_82eXhbbqW0',
                     'mode' => 'document_photo',
                     'file' =>'@'.$filePath);
