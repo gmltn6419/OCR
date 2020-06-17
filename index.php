@@ -3,6 +3,7 @@
 </head>
 <body>
 <?php
+/*
 // A few settings
 $img_file = './test.jpg';
 
@@ -11,10 +12,10 @@ $imgData = base64_encode(file_get_contents($img_file));
 
 // Format the image SRC:  data:{mime};base64,{data};
 $src = 'data: '.mime_content_type($img_file).';base64,'.$imgData;
-
+*/
   $client_secret = "T1hYWWZkV2lKdmh0TUlrVWRJUWRHakpVWnhZVWRoSVo=";
   $url = "https://1464f1962ec246f78d43a81570f890f4.apigw.ntruss.com/custom/v1/2227/03d0fe469502affac6c2f54393e8beec2aa98d871cffb9bf9f696aceddf62dac/general";
-  $image_file = $src;
+  $image_file = "./sample.jpg";
 
   $params->version = "V2";
   $params->requestId = uniqid();
