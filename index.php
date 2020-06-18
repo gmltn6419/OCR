@@ -46,6 +46,9 @@
     echo "<br>\n";
     echo "---------------------------------<br>\n";
 
+    $result = call_user_func_array('array_merge', $arr);
+    print_r($result);
+
   } else {
     echo "ERROR: ".$response;
   }
