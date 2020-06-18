@@ -79,13 +79,14 @@ if($status_code == 200) {
 
   echo $status_code;
   if($status_code == 200) {
-    
     $arr =  json_decode($response,true);
 
-    foreach ($arr as $key => $value) {
-      print $value; 
+    foreach ($arr as $row1) {
+      foreach ($row1 as $row2) {
+        print $row2['inferText']; 
+      }
     }
-
+     
   } else {
     echo "ERROR: ".$response;
   }
