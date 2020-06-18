@@ -45,9 +45,9 @@
     print_r($arr);
     echo "<br>\n";
     echo "---------------------------------";
-    
+
     foreach($arr as $value) {
-      echo $value['inferText'];
+      echo $value['[inferText]'];
     }
 
   } else {
