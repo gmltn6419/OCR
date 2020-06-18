@@ -38,7 +38,7 @@
   //echo $status_code;
 
   if($status_code == 200) {
-    /*
+    
     echo $response."<br>\n";
     echo "---------------------------------<br>\n";
 
@@ -46,7 +46,7 @@
     print_r($arr);
     echo "<br>\n";
     echo "---------------------------------<br>\n";
-  */
+  
     function flatten($l, $result = []){
           foreach ($l as $value) {
               if(is_array($value)) {
