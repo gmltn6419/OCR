@@ -42,13 +42,14 @@ $src = 'data: '.mime_content_type($img_file).';base64,'.$imgData;
   $err = curl_error($ch);
   $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
   curl_close ($ch);
-
+  /*
   echo $status_code;
   if($status_code == 200) {
     echo $response;
   } else {
     echo "ERROR: ".$response;
-  }
+  }*/
+  echo $response[0];
 ?>
 </body>
 </html>
