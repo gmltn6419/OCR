@@ -46,14 +46,6 @@
     echo "<br>\n";
     echo "---------------------------------<br>\n";
 
-    foreach($arr as $number => $number_array)
-    {
-    foreach($number_array as $data = > $user_data)
-        {
-            print "Array number: $number, contains $data with $user_data.  <br>";
-        }
-    }
-
   } else {
     echo "ERROR: ".$response;
   }
