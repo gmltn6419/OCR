@@ -6,7 +6,7 @@
   $client_secret = "T1hYWWZkV2lKdmh0TUlrVWRJUWRHakpVWnhZVWRoSVo=";
   $url = "https://1464f1962ec246f78d43a81570f890f4.apigw.ntruss.com/custom/v1/2227/03d0fe469502affac6c2f54393e8beec2aa98d871cffb9bf9f696aceddf62dac/general";
   //$image_url = "YOUR_IMAGE_URL";
-  $image_file = "./sample.png";
+  $image_file = "./welcome.jpg";
 
   $params->version = "V2";
   $params->requestId = "uuid";
@@ -35,9 +35,10 @@
   $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
   curl_close ($ch);
 
-  echo $status_code;
+  //echo $status_code;
 
   if($status_code == 200) {
+    /*
     echo $response."<br>\n";
     echo "---------------------------------<br>\n";
 
@@ -45,7 +46,7 @@
     print_r($arr);
     echo "<br>\n";
     echo "---------------------------------<br>\n";
-
+  */
     function flatten($l, $result = []){
           foreach ($l as $value) {
               if(is_array($value)) {
