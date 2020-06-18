@@ -44,16 +44,13 @@ $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close ($ch);
 
 echo $status_code;
-/*
+
 if($status_code == 200) {
-  echo $response;
+  echo json_encode($response);
 } else {
   echo "ERROR: ".$response;
 }
-*/
-$text = array();
-$text[] = $response;
-$text[3];
+
 
 ?>
 </body>
