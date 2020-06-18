@@ -38,7 +38,8 @@
   echo $status_code;
 
   if($status_code == 200) {
-    echo $response;
+    $arr = json_decode($response, true);
+    print_r($arr);
     
   } else {
     echo "ERROR: ".$response;
