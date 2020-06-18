@@ -39,8 +39,16 @@
 
   if($status_code == 200) {
     $arr = json_decode($response, true);
-    print_r($arr);
-    
+
+    foreach ($arr as $key => $val) {
+      if(is_array($val)) { // val 이 배열이면
+          echo "$key:<br/>";
+          //echo $key.' (key), value : (array)<br />';
+      } else { // 배열이 아니면
+          echo "$key => $val <br />";
+      }
+  }
+
   } else {
     echo "ERROR: ".$response;
   }
