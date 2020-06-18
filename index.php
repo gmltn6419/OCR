@@ -46,25 +46,29 @@
     echo "<br>\n";
     echo "---------------------------------<br>\n";
 
-    function flatten($l, $flattened_list = []){
+    function flatten($l, $result = []){
           foreach ($l as $value) {
               if(is_array($value)) {
-                  $flattened_list = flatten($value, $flattened_list);
+                  $result = flatten($value, $result);
               } else {
-                  $flattened_list[] = $value;
+                  $result[] = $value;
               }
           }
-          return $flattened_list;
+          return $result;
     }
 
-  $flattened_list = flatten($arr);
+  $result = flatten($arr);
   
-  echo $flattened_list[17];
+  echo count($result);
+  //echo $result[17];
   
-  for($i = 29; $i < count($fflattened_list); $i++){
-    echo " ".$flattened_list[$i];
-    $i = $i + 12;
-  }
+  $i = 17;
+  while($i<= count($result);) 
+	{
+		echo $result[i]." "; 
+		$i = $i + 12;
+	}
+
 
   } else {
     echo "ERROR: ".$response;
