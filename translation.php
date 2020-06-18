@@ -69,7 +69,7 @@
   //echo $result[17];
   $k = 0;
 
-  echo "<img = src='".$filename."' /><br>\n";
+  echo "<img src='".$filename."' /><br>\n";
 
   echo "이미지에서 변환된 텍스트 : ";
   for($i=17; $i<$j; $i=$i + 12){
