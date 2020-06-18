@@ -46,7 +46,7 @@ curl_close ($ch);
 echo $status_code;
 
 if($status_code == 200) {
-  echo json_decode($response);
+  echo json_encode($response);
 } else {
   echo "ERROR: ".$response;
 }
