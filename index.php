@@ -49,6 +49,15 @@
     foreach ($arr as $key => $val) {
       if(is_array($val)) {
           echo "$key:<br/>";
+          if($key = "images"){
+            foreach ($key as $key => $val) {
+              if(is_array($val)) {
+                echo "$key:<br/>";
+              }
+              else {
+                echo "$key => $val<br/>";
+              }
+          }
       } else {
           echo "$key => $val<br/>";
       }
