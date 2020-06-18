@@ -45,6 +45,8 @@ curl_close ($ch);
 
 echo $status_code;
 
+echo $response;
+/*
 if($status_code == 200) {
   $decode = json_decode($response);
   $text = array_column($decode,'inferText');
@@ -52,7 +54,7 @@ if($status_code == 200) {
 } else {
   echo "ERROR: ".$response;
 }
-
+*/
 
 ?>
 </body>
