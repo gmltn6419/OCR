@@ -75,16 +75,12 @@
     $k++;
   }
 
-  echo $result2[0];
-  echo $result2[1];
-
   } else {
     echo "ERROR: ".$response;
   }
 
-  /*번역
   $api_key = 'AIzaSyDVGM-H4bVy9eRPnTSz0wPB_82eXhbbqW0';
-  $text = ;
+  $text = "welcome to silla";
   $source="en";
   $target="ko";
   
@@ -107,7 +103,7 @@
   }
   else
       echo "UNKNOW ERROR";
-  */
+
 ?>
 </body>
 </html>
