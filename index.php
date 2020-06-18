@@ -38,11 +38,14 @@
   echo $status_code;
 
   if($status_code == 200) {
-    echo $response."<br\n";
-    
-    $arr = json_decode($response, true);
-    print_r($arr);
+    echo $response."<br>\n";
 
+    $arr = json_decode($response, true);
+    print_r($arr)."<br>\n";
+
+    foreach($arr as $value) {
+      echo $value['image'];
+    }
 
   } else {
     echo "ERROR: ".$response;
