@@ -6,7 +6,7 @@
   $client_secret = "T1hYWWZkV2lKdmh0TUlrVWRJUWRHakpVWnhZVWRoSVo=";
   $url = "https://1464f1962ec246f78d43a81570f890f4.apigw.ntruss.com/custom/v1/2227/03d0fe469502affac6c2f54393e8beec2aa98d871cffb9bf9f696aceddf62dac/general";
   //$image_url = "YOUR_IMAGE_URL";
-  $image_file = "./sample.png";
+  $image_file = "./11.png";
 
   $params->version = "V2";
   $params->requestId = "uuid";
