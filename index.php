@@ -39,12 +39,12 @@
 
   if($status_code == 200) {
     echo $response."<br>\n";
-    echo "---------------------------------";
+    echo "---------------------------------<br>\n";
 
     $arr = json_decode($response, true);
     print_r($arr);
     echo "<br>\n";
-    echo "---------------------------------";
+    echo "---------------------------------<br>\n";
 
     foreach($arr as $value) {
       echo $value['[inferText]'];
