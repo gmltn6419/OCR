@@ -61,14 +61,10 @@
   
   echo count($result);
   //echo $result[17];
-  /*
-  $i = 17;
-  while($i<= count($result);) 
-	{
-		echo $result[i]." "; 
-		$i = $i + 12;
-	}
-  */
+  
+  for($i = 17; $i < count($result);; $i = $i + 12){
+    echo $result[i]." ";
+  }
 
   } else {
     echo "ERROR: ".$response;
