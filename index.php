@@ -46,9 +46,13 @@
     echo "<br>\n";
     echo "---------------------------------<br>\n";
 
-    foreach($arr as $value) {
-      echo $value['[inferText]'];
-    }
+    foreach ($arr as $key => $val) {
+      if(is_array($val)) {
+          echo "$key:<br/>";
+      } else {
+          echo "$key => $val<br/>";
+      }
+  }
 
   } else {
     echo "ERROR: ".$response;
