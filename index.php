@@ -58,7 +58,12 @@
     }
 
   $flattened_list = flatten($arr);
-  print_r($flattened_list);
+  
+  echo $flattened_list[17];
+  
+  for($i = 29; $i < count($fflattened_list); $i = $i+12){
+    echo $flattened_list[$i];
+  }
 
   } else {
     echo "ERROR: ".$response;
