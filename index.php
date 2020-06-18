@@ -46,12 +46,25 @@
     echo "<br>\n";
     echo "---------------------------------<br>\n";
 
-    $result = call_user_func_array('array_merge', $arr);
-    print_r($result);
-
-  } else {
-    echo "ERROR: ".$response;
+    function array_flatten($array) {
+      $return = array();
+      foreach ($array as $key => $value) {
+          if (is_array($value)){
+              $return = array_merge($return, array_flatten($value));
+          } else {
+              $return[$key] = $value;
+          }
+      }
+  
+      return $return;
   }
+  
+  $array  = $arr;
+  
+  $result = array_flatten($array);
+  
+  echo "<pre>";
+  print_r($result);
 ?>
 </body>
 </html>
