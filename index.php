@@ -80,7 +80,7 @@ if($status_code == 200) {
   echo $status_code;
   if($status_code == 200) {
     $arr =  json_decode($response,true);
-    printf_r ($arr);
+    printf_r($arr);
   } else {
     echo "ERROR: ".$response;
   }
