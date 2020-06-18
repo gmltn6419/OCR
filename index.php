@@ -55,16 +55,19 @@
               $return[$key] = $value;
           }
       }
-  
       return $return;
+    }
+    
+    $array  = $arr;
+    
+    $result = array_flatten($array);
+    
+    echo "<pre>";
+    print_r($result);
+
+  } else {
+    echo "ERROR: ".$response;
   }
-  
-  $array  = $arr;
-  
-  $result = array_flatten($array);
-  
-  echo "<pre>";
-  print_r($result);
 ?>
 </body>
 </html>
