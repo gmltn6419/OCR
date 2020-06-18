@@ -69,6 +69,7 @@
   //echo $result[17];
   $k = 0;
 
+  echo "이미지에서 변환된 텍스트 : "
   for($i=17; $i<$j; $i=$i + 12){
     echo $result[$i]." ";
     $result2[$k] = $result[$i];
@@ -105,7 +106,7 @@
       }
       else
       {
-          echo "<br>/n 번역완료 : ".$obj['data']['translations'][0]['translatedText'];
+          echo "<br> 번역완료 : ".$obj['data']['translations'][0]['translatedText'];
       }
   }
   else
