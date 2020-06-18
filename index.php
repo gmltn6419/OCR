@@ -59,10 +59,10 @@
 
   $result = flatten($arr);
   
-  echo count($result);
+  $j=count($result);
   //echo $result[17];
   
-  for($i = 17; $i < count($result);; $i = $i + 12){
+  for($i=17; $i<$j; $i=$i + 12){
     echo $result[i]." ";
   }
 
