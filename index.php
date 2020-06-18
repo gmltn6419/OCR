@@ -46,24 +46,19 @@
     echo "<br>\n";
     echo "---------------------------------<br>\n";
 
-    function array_flatten($array) {
-      $return = array();
-      foreach ($array as $key => $value) {
-          if (is_array($value)){
-              $return = array_merge($return, array_flatten($value));
-          } else {
-              $return[$key] = $value;
+    function flatten($l, $flattened_list = []){
+          foreach ($l as $value) {
+              if(is_array($value)) {
+                  $flattened_list = flatten($value, $flattened_list);
+              } else {
+                  $flattened_list[] = $value;
+              }
           }
-      }
-      return $return;
+          return $flattened_list;
     }
-    
-    $array  = $arr;
-    
-    $result = array_flatten($array);
-    
-    echo "<pre>";
-    print_r($result);
+
+  $flattened_list = flatten($arr);
+  print_r($flattened_list);
 
   } else {
     echo "ERROR: ".$response;
