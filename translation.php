@@ -79,8 +79,15 @@
     echo "ERROR: ".$response;
   }
 
+  //번역
+  $g = count($result2);
+
   $api_key = 'AIzaSyDVGM-H4bVy9eRPnTSz0wPB_82eXhbbqW0';
-  $text = "welcome to silla";
+  
+  for($i = 0; $i <= $g; $i++){
+    $text = $text.$result2[$i]." ";
+  }
+
   $source="en";
   $target="ko";
   
@@ -98,7 +105,7 @@
       }
       else
       {
-          echo "Translsated Text: ".$obj['data']['translations'][0]['translatedText'];
+          echo "<br>/n 번역완료 : ".$obj['data']['translations'][0]['translatedText'];
       }
   }
   else
