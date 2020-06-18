@@ -46,22 +46,13 @@
     echo "<br>\n";
     echo "---------------------------------<br>\n";
 
-    foreach ($arr as $key => $val) {
-      if(is_array($val)) {
-          echo "$key:<br/>";
-          if($key = "images"){
-            foreach ($key as $key => $val) {
-              if(is_array($val)) {
-                echo "$key:<br/>";
-              }
-              else {
-                echo "$key => $val<br/>";
-              }
-          }
-      } else {
-          echo "$key => $val<br/>";
-      }
-  }
+    foreach($arr as $number => $number_array)
+    {
+    foreach($number_array as $data = > $user_data)
+        {
+            print "Array number: $number, contains $data with $user_data.  <br>";
+        }
+    }
 
   } else {
     echo "ERROR: ".$response;
