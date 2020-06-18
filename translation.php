@@ -3,6 +3,7 @@
 </head>
 <body>
 <?php
+//이미지 -> 텍스트 변환
   $filename =  date("YmdHis").".jpg";
   move_uploaded_file($_FILES['imageform']['tmp_name'], $filename);
 
@@ -62,17 +63,50 @@
     }
 
   $result = flatten($arr);
+  $result2 = [];
   
   $j=count($result);
   //echo $result[17];
-  
+  $k = 0;
+
   for($i=17; $i<$j; $i=$i + 12){
     echo $result[$i]." ";
+    $result2[$k] = $result[$i];
+    $k++;
   }
+
+  echo $result2[0];
 
   } else {
     echo "ERROR: ".$response;
   }
+
+  /*번역
+  $api_key = 'AIzaSyDVGM-H4bVy9eRPnTSz0wPB_82eXhbbqW0';
+  $text = ;
+  $source="en";
+  $target="ko";
+  
+  $url = 'https://www.googleapis.com/language/translate/v2?key=' . $api_key . '&q=' . rawurlencode($text);
+  $url .= '&target='.$target;
+  $url .= '&source='.$source;
+  
+  $response = file_get_contents($url);
+  $obj =json_decode($response,true); //true converts stdClass to associative array.
+  if($obj != null)
+  {
+      if(isset($obj['error']))
+      {
+          echo "Error is : ".$obj['error']['message'];
+      }
+      else
+      {
+          echo "Translsated Text: ".$obj['data']['translations'][0]['translatedText'];
+      }
+  }
+  else
+      echo "UNKNOW ERROR";
+  */
 ?>
 </body>
 </html>
