@@ -44,7 +44,7 @@
     print_r($arr)."<br>\n";
 
     foreach($arr as $value) {
-      echo $value['image'];
+      echo $value['inferText'];
     }
 
   } else {
