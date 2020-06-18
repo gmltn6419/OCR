@@ -76,6 +76,7 @@
   }
 
   echo $result2[0];
+  echo $result2[1];
 
   } else {
     echo "ERROR: ".$response;
