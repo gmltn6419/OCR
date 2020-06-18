@@ -63,7 +63,7 @@
   //echo $result[17];
   
   for($i=17; $i<$j; $i=$i + 12){
-    echo $result[i]." ";
+    echo $result[$i]." ";
   }
 
   } else {
