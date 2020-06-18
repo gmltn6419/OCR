@@ -79,7 +79,7 @@ if($status_code == 200) {
 
   echo $status_code;
   if($status_code == 200) {
-    $decode = json_decode($response, true);
+    $decode = json_decode($response);
     $text = array_column($decode, 'inferText');
     echo $text;
   } else {
