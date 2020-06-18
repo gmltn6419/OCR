@@ -42,16 +42,17 @@
   //echo $status_code;
 
   if($status_code == 200) {
-    
+    echo "<JSON 상태><br>\n";
     echo $response."<br>\n";
     echo "---------------------------------<br>\n";
 
+    echo "<JSON에서 php배열로 변경한 상태><br>\n";
     $arr = json_decode($response, true);
     print_r($arr);
     echo "<br>\n";
     echo "---------------------------------<br>\n";
   
-    function flatten($l, $result = []){
+    function flatten($l, $result = []){ //다차원 배열을 하나의 배열로 만들어주는 함수
           foreach ($l as $value) {
               if(is_array($value)) {
                   $result = flatten($value, $result);
@@ -62,18 +63,15 @@
           return $result;
     }
 
-  $result = flatten($arr);
-  $result2 = [];
+  $result = flatten($arr); //함수 호출
+  $result2 = []; //변환된 텍스트를 담을 배열
   
-  $j=count($result);
-  //echo $result[17];
-  $k = 0;
-
-  echo "<img src='".$filename."' /><br>\n";
+  $j=count($result); //배열의 길이 저장
+  $k = 0; 
 
   echo "이미지에서 변환된 텍스트 : ";
   for($i=17; $i<$j; $i=$i + 12){
-    echo $result[$i]." ";
+    echo $result[$i]." "; //변환된 텍스트 출력
     $result2[$k] = $result[$i];
     $k++;
   }
@@ -83,12 +81,12 @@
   }
 
   //번역
-  $g = count($result2);
+  $g = count($result2); // 텍스트를 담은 배열의 길이를 저장
 
   $api_key = 'AIzaSyDVGM-H4bVy9eRPnTSz0wPB_82eXhbbqW0';
   
-  for($i = 0; $i <= $g; $i++){
-    $text = $text.$result2[$i]." ";
+  for($i = 0; $i <= $g; $i++){ //배열의 길이까지 for문을 돌린다.
+    $text = $text.$result2[$i]." "; // 번역을 위한 텍스트를 text변수에 저장.
   }
 
   $source="en";
