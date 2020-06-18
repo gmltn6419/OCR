@@ -62,7 +62,9 @@
           }
           return $result;
     }
-
+  echo "[다차원 배열을 하나로 만든 상태]<br>\n";
+  echo flatten($arr);
+  echo "---------------------------------<br>\n";
   $result = flatten($arr); //함수 호출
   $result2 = []; //변환된 텍스트를 담을 배열
   
