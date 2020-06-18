@@ -42,11 +42,11 @@
   //echo $status_code;
 
   if($status_code == 200) {
-    echo "<JSON 상태><br>\n";
+    echo "[JSON 상태]<br>\n";
     echo $response."<br>\n";
     echo "---------------------------------<br>\n";
 
-    echo "<JSON에서 php배열로 변경한 상태><br>\n";
+    echo "[JSON에서 php배열로 변경한 상태]<br>\n";
     $arr = json_decode($response, true);
     print_r($arr);
     echo "<br>\n";
